@@ -1,10 +1,15 @@
 import express from 'express'
+import { deleteAccount, getAccount, getAllAccounts, saveAccount, updateAccount } from '../controllers/account.controller.js';
 
 const router = express.Router();
 
 router.route('/')
-    .get((req,res,next) => {
-        console.log('reached here: ', req)
-    })
+    .get(getAllAccounts)
+    .post(saveAccount)
+
+router.route('/:id')
+    .get(getAccount)
+    .put(updateAccount)
+    .delete(deleteAccount)
 
 export default router
