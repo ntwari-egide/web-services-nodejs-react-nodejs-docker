@@ -1,3 +1,5 @@
+import { Account } from "../models/account";
+
 let accounts = [
     {
         id: 1,
@@ -30,9 +32,12 @@ let accounts = [
 ]
 
 export const getAllAccounts = (req,res) => {
-    return res.send({
-        data: accounts
-    });
+    Account.find()
+    .then(response => {
+        res.send({
+            data: response
+        });
+    })
 }
 
 export const getAccount = (req,res) => {
