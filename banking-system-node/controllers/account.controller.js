@@ -1,4 +1,4 @@
-import { Account } from "../models/account";
+import { Account } from "../models/account.js";
 
 let accounts = [
     {
@@ -31,8 +31,8 @@ let accounts = [
     }
 ]
 
-export const getAllAccounts = (req,res) => {
-    Account.find()
+export const getAllAccounts = async (req,res) => {
+    await Account.find()
     .then(response => {
         res.send({
             data: response
@@ -40,19 +40,21 @@ export const getAllAccounts = (req,res) => {
     })
 }
 
-export const getAccount = (req,res) => {
-    const account = accounts.find( account => account.id == req.params.id)
+export const getAccount = async (req,res) => {
+    const account = await Account.findById(req.params.id)
 
     return res.send({
         data: account
     })
 }
 
-export const saveAccount = (req,res) => {
+export const saveAccount = async (req,res) => {
 
-    accounts.push(req.body);
+    await Account.create(req.body);
 
-    return res.send("Data stored")
+    return res.send({
+        message: 'account created!'
+    }).status(201)
 }
 
 export const updateAccount = (req,res) => {
