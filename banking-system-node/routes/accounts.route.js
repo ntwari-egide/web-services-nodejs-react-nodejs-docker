@@ -21,6 +21,65 @@ router.route('/')
      *      description: return all candidates accounts
      *      tags: [Accounts]
      *      responses:
+     *          200:
+     *              description: return all candidate accounts
+     *              content:
+     *              application/json:
+     *                  schema:
+     *                      type: object
+     *                      properties:
+     *                          message:
+     *                              type: String
+     *                              example: changes
+     *                          data:
+     *                              type: array
+     *                              items:
+     *                                  type: object
+     *                                  properties:
+     *                                      id:
+     *                                          type: string
+     *                                          description: dadafs
+     *                                          example: 242341341234
+     */
+    .get( protectedMe, getAllAccounts)
+
+    /**
+     * @swagger
+     * path:
+     * /api/v1/accounts:
+     *  post:
+     *      summary: save new account
+     *      description: add new candidate
+     *      tags: [Accounts]
+     *      requestBody:
+     *          required: true
+     *          content:
+     *              application/json:
+     *                  schema:
+     *                      type: object
+     *                      properties:
+     *                          candidateName:
+     *                              type: string
+     *                              description: candidate name
+     *                              example: egide
+     *                          partyName:
+     *                              type: string
+     *                              description: party name
+     *                              example: democrates
+     *                          profileUrl:
+     *                              type: string
+     *                              example:
+     *                          votes:
+     *                              type: number
+     *                              description: candidate name
+     *                              example: 0
+     *                          postTitle:
+     *                              type: string
+     *                              example: "PRESIDENT OF STATE"
+     *                          postDescription:
+     *                              type: string
+     *                              example: "president of state"
+     *      responses:
      *          201:
      *              description: return all candidate accounts
      *              content:
@@ -37,11 +96,10 @@ router.route('/')
      *                                  type: object
      *                                  properties:
      *                                      id:
-        *                                      type: string
-        *                                      description: dadafs
-        *                                      example: 242341341234
+     *                                          type: string
+     *                                          description: dadafs
+     *                                          example: 242341341234
      */
-    .get( protectedMe, getAllAccounts)
     .post(saveAccount)
 
 router.route('/:id')
