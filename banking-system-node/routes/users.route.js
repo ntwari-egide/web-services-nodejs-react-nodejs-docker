@@ -3,7 +3,7 @@ import { saveUser } from '../controllers/auth.controller.js'
 
 const router = express.Router()
 
-router.route('/')
+router.route('/signup')
     .post(saveUser)
 
 

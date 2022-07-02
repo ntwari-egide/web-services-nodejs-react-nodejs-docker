@@ -1,10 +1,11 @@
 import express from 'express'
 import { deleteAccount, getAccount, getAllAccounts, saveAccount, updateAccount } from '../controllers/account.controller.js';
+import { protectedMe } from '../controllers/auth.controller.js';
 
 const router = express.Router();
 
 router.route('/')
-    .get(getAllAccounts)
+    .get( protectedMe, getAllAccounts)
     .post(saveAccount)
 
 router.route('/:id')
