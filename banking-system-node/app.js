@@ -1,6 +1,7 @@
 import express from 'express'
 import AccountsRouter from './routes/accounts.route.js'
 import cors from 'cors'
+import './server.js'
 
 const app = express()
 
