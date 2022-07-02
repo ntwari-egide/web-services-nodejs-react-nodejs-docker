@@ -1,36 +1,5 @@
 import { Account } from "../models/account.js";
 
-let accounts = [
-    {
-        id: 1,
-        accountName: "324124124",
-        bankName: "BK",
-        balance: 5000,
-        loginId: "ntwari"
-    },
-    {
-        id: 2,
-        accountName: "324124124",
-        bankName: "BK",
-        balance: 5000,
-        loginId: "ntwari"
-    },
-    {
-        id: 3,
-        accountName: "324124124",
-        bankName: "BK",
-        balance: 5000,
-        loginId: "ntwari"
-    },
-    {
-        id: 4,
-        accountName: "324124124",
-        bankName: "BK",
-        balance: 5000,
-        loginId: "ntwari"
-    }
-]
-
 export const getAllAccounts = async (req,res) => {
     await Account.find()
     .then(response => {
@@ -57,18 +26,24 @@ export const saveAccount = async (req,res) => {
     }).status(201)
 }
 
-export const updateAccount = (req,res) => {
-    accounts = accounts.map(acc => 
-        acc.id == req.params.id ? 
-        { ...acc, accountName: req.body.accountName, bankName: req.body.bankName, loginId: req.body.loginId, balance: req.body.balance }   : acc
-    )
+export const updateAccount = async (req,res) => {
 
-    return res.send({
-        message: 'updated accounts ....',
-        data: accounts
+    await Account.findByIdAndUpdate( {_id: req.params.id}, req.body, {new: true})
+    .then( response => {
+        return res.send({
+            message: 'updated accounts ....',
+            data: response
+        })
     })
+    
 }
 
-export const deleteAccount = (req,res) => {
-    
+export const deleteAccount = async (req,res) => {
+    await Account.findByIdAndRemove(req.params.id)
+    .then(response => {
+        return res.send({
+            message: 'Deleted account',
+            data: response
+        })
+    })
 }
