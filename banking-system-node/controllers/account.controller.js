@@ -22,7 +22,7 @@ export const saveAccount = async (req,res) => {
     await Account.create(req.body);
 
     return res.send({
-        message: 'account created!'
+        message: 'candidates created!'
     }).status(201)
 }
 
@@ -35,6 +35,23 @@ export const updateAccount = async (req,res) => {
             data: response
         })
     })
+    
+}
+
+export const incrementVotes = async (accountId) => {
+    const account = await Account.findById(accountId);
+
+    const request = {
+        candidateName : account.candidateName,
+        partyName : account.partyName,
+        profileUrl: account.profileUrl,
+        votes: account.votes + 1,
+        postTitle: account.postTitle,
+        postDescription: account.postDescription
+    }
+
+
+    await Account.findByIdAndUpdate( {_id: accountId}, request, { new: true})
     
 }
 

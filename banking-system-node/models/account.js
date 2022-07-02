@@ -5,22 +5,30 @@ const accountSchema = mongoose.Schema({
         type: String,
         require: 'account is required!'
     },
-    accountName: {
+    candidateName: {
         type: String,
-        require: 'account name is required'
+        require: 'candidate name is required'
     },
-    bankName: {
+    partyName: {
         type: String,
-        require: 'bank name is required'
+        require: 'party name is required'
     },
-    balance: {
-        type: String,
-        require: 'balance is required'
+    profileUrl: {
+        type: String
+    },  
+    votes: {
+        type: Number,
+        default: 0,
+        require: 'votes are required'
     },
-    loginId: {
+    postTitle: {
         type: String,
-        require: "login ID is required"
+        require: "Post type is required"
+    },
+    postDescription: {
+        type: String,
+        require: 'Post description is required'
     }
 })
 
-export const Account = mongoose.model('accounts', accountSchema)
+export const Account = mongoose.model('candates_accounts', accountSchema)
