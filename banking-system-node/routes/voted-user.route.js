@@ -3,15 +3,24 @@ import { saveVotedUser } from '../controllers/voted-user.controller.js';
 
 const router = express.Router()
 
+
+/**
+ * @swagger
+ * tags: 
+ *  name: Voting
+ *  description: voting apis are here
+ */
+
+
 router.route('/')
     /**
      * @swagger
      * path:
-     * /api/v1/users/voting:
+     * /api/v1/voting:
      *  post:
      *      summary: voting
      *      description: request voting and voting
-     *      tags: [Users]
+     *      tags: [Voting]
      *      requestBody:
      *          required: true
      *          content:

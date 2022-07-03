@@ -41,7 +41,7 @@ router.route('/')
      *                                          description: dadafs
      *                                          example: 242341341234
      */
-    .get( protectedMe, getAllAccounts)
+    .get( getAllAccounts)
 
     /**
      * @swagger

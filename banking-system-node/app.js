@@ -9,7 +9,7 @@ import swaggerUi from 'swagger-ui-express'
 
 const app = express()
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3030
 
 //middlewares
 app.use(cors())
@@ -35,7 +35,7 @@ const swaggerDefinition = {
     },
     servers: [
       {
-        url: 'http://localhost:3000',
+        url: 'http://localhost:3030',
         description: 'Development server',
       },
     ],

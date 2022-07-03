@@ -4,7 +4,7 @@ import { incrementVotes } from "./account.controller.js"
 
 export const saveVotedUser = async (req,res,next) => {
 
-    if(hasuservoted(req.body.votedUser, req.body.candidate)) {
+    if(!hasuservoted(req.body.votedUser, req.body.candidate)) {
         return res.send({
             message: 'You have voted this candidate already.'
         })
