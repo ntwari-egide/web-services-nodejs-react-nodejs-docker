@@ -30,9 +30,10 @@ export const LayoutDashboard = (props) => {
       style={{
         minHeight: '100vh',
       }}
+      className="sticky-top"
 
     >
-      <Sider collapsible collapsed={collapsed} theme="light" className=' border-end border' onCollapse={(value) => setCollapsed(value)}>
+      <Sider collapsible collapsed={collapsed} theme="light" className=' border-end border ' onCollapse={(value) => setCollapsed(value)}>
         <div className='container mt-5 mb-5'>
             <Image 
                 className='rounded-circle border_red'
@@ -48,7 +49,7 @@ export const LayoutDashboard = (props) => {
       </Sider>
       <Layout className="site-layout" >
         <Header
-          className="site-layout-background border-1 border-bottom"
+          className="site-layout-background border-1 border-bottom sticky-top"
           style={{
             padding: 0,
           }}
