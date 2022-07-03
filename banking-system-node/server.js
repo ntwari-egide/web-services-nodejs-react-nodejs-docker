@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
+import db from './config/db.config.js'
 
-mongoose.connect('mongodb://localhost:27017/banking-system', {
+console.log('url: ', db.url)
+
+mongoose.connect(db.url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }, error => {

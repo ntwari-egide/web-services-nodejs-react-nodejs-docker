@@ -27,8 +27,9 @@ function App() {
 
     await axios.post('http://localhost:3030/api/v1/voting', request)
     .then(response => {
-      alert("Thanks for voting")
-      location.reload()
+      console.log('res; ',response)
+      // alert("Thanks for voting")
+      // location.reload()
     })
   }
 
