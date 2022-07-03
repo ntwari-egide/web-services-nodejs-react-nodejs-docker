@@ -33,19 +33,19 @@ export const LayoutDashboard = (props) => {
       className="sticky-top"
 
     >
-      <Sider collapsible collapsed={collapsed} theme="light" className=' border-end border ' onCollapse={(value) => setCollapsed(value)}>
-        <div className='container mt-5 mb-5'>
+      <Sider collapsible collapsed={collapsed} theme="light" className=' border-end border sticky-top ' onCollapse={(value) => setCollapsed(value)}>
+        <div className='container mt-5 mb-5 sticky-top'>
             <Image 
                 className='rounded-circle border_red'
-                width={'80px'}
+                width={`${collapsed ? '50px':'80px'}`}
                 preview={false}
-                height={'80px'}
+                height={`${collapsed ? '50px':'80px'}`}
                 src={'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'}
             />
 
-            <h2 className=' text-center display-6 mt-4' style={{ fontSize: '16px', fontWeight: 'bold'}}>Vottingg</h2>
+            <h2 className=' text-center display-6 mt-4' style={{ fontSize: `${collapsed ? '13px':'16px'}`, fontWeight: 'bold'}}>Vottingg</h2>
         </div>
-        <Menu theme="light" defaultSelectedKeys={['2']} mode="inline" items={items} />
+        <Menu theme="light" defaultSelectedKeys={['2']} mode="inline" items={items} className=' sticky-top' />
       </Sider>
       <Layout className="site-layout" >
         <Header

@@ -53,9 +53,9 @@ section.ant-layout.site-layout {
 
 .card-details {
   margin-top: 31vh;
-  height: 194px;
+  height: 200px;
   padding-top: 31px;
-  background: rgba(255, 255, 255, 0.424);
+  background: rgba(255, 255, 255, 0.618);
 }
 
 .card-details h4 {
@@ -67,4 +67,12 @@ section.ant-layout.site-layout {
   font-weight: normal;
   font-size: 16px;
   margin-top: 14px;
+}
+
+.vote-bg{
+  background-image: url('https://images.pexels.com/photos/2955375/pexels-photo-2955375.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') !important;
+  object-fit: cover;
+  background-size: cover;
+  background: linear-gradient('green');
+  background-repeat: no-repeat;
 }

@@ -13,13 +13,13 @@ function App() {
 
             <div className=' d-flex flex-row'>
               <div className='dark_white_bg ' style={{ width: '50%', height: '10vw'}}> </div>
-              <h2 className=' mt-4 font-weight-bold' style={{ marginLeft: '-7vw', zIndex: 1, fontWeight: 'bold'}}>You vote is secure <br></br> Your vote counts</h2>
+              <h2 className=' mt-4 font-weight-bold' style={{ marginLeft: '-7vw', zIndex: 1, fontWeight: 'bold'}}>You vote is secure, <br></br> Your vote counts</h2>
             </div>
 
             <h4 className=' text-start mt-5 h6'>President of United States</h4>
 
             <div className=' d-flex flex-row mt-4 justify-content-between'>
-                <div className=' rounded-3 dark_white_bg' style={{ width: '24vw', background: '', height: '500px'}}>
+                <div className=' rounded-3 dark_white_bg vote-bg' style={{ width: '24vw', background: '', height: '500px'}}>
                   <div className='votes-content'>35</div>
 
                   <div className='card-details'>
@@ -32,7 +32,7 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div className=' rounded-3 dark_white_bg' style={{ width: '24vw', background: '', height: '500px'}}>
+                <div className=' rounded-3 dark_white_bg vote-bg' style={{ width: '24vw', background: '', height: '500px'}}>
                   <div className='votes-content'>34</div>
 
                   <div className='card-details'>
@@ -45,7 +45,7 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div className=' rounded-3 dark_white_bg' style={{ width: '24vw', background: '', height: '500px'}}>
+                <div className=' rounded-3 dark_white_bg vote-bg' style={{ width: '24vw', background: '', height: '500px'}}>
                   <div className='votes-content'>33</div>
 
                   <div className='card-details'>
@@ -63,7 +63,7 @@ function App() {
             <h4 className=' text-start mt-5 h6'>School Stuff</h4>
 
             <div className=' d-flex flex-row mt-4 justify-content-between'>
-                <div className=' rounded-3 dark_white_bg' style={{ width: '24vw', background: '', height: '500px'}}>
+                <div className=' rounded-3 dark_white_bg vote-bg' style={{ width: '24vw', background: '', height: '500px'}}>
                   <div className='votes-content'>35</div>
 
                   <div className='card-details'>
@@ -76,7 +76,7 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div className=' rounded-3 dark_white_bg' style={{ width: '24vw', background: '', height: '500px'}}>
+                <div className=' rounded-3 dark_white_bg vote-bg' style={{ width: '24vw', background: '', height: '500px'}}>
                   <div className='votes-content'>34</div>
 
                   <div className='card-details'>
@@ -89,7 +89,7 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div className=' rounded-3 dark_white_bg' style={{ width: '24vw', background: '', height: '500px'}}>
+                <div className=' rounded-3 dark_white_bg vote-bg' style={{ width: '24vw', background: '', height: '500px'}}>
                   <div className='votes-content'>33</div>
 
                   <div className='card-details'>
