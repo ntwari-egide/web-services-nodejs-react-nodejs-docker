@@ -3,12 +3,12 @@ import { getAllUsers, login, saveUser } from '../controllers/auth.controller.js'
 
 const router = express.Router()
 
-/**
- * @swagger
- * tags: 
- *  name: Users
- *  description: users apis are here
- */
+    /**
+     * @swagger
+     * tags: 
+     *  name: Users
+     *  description: users apis are here
+     */
 
 router.route('/')
     /**
@@ -43,6 +43,7 @@ router.route('/')
     .get(getAllUsers)
 
 router.route('/signup')
+
     /**
      * @swagger
      * path:
@@ -136,6 +137,7 @@ router.route('/login')
      *                                          description: dadafs
      *                                          example: 242341341234
      */
+    
     .post(login)
 
 
